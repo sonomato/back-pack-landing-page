@@ -39,6 +39,7 @@
       "demos"
       "download"
       "newsletter"
+      "footer"
     }
     @media (min-width: 800px) {
       main {
@@ -47,7 +48,8 @@
         grid-template-areas: 
           "header header"
           "infos demos"
-          "download newsletter";
+          "download newsletter"
+          "footer footer";
       }
     }
     main > * {
@@ -100,6 +102,11 @@
       grid-area: newsletter;
       background-color: #b95b1c71;
     }
+    footer {
+      grid-area: footer;
+      background-color: #000000;
+      color: white;
+    }
 
     #infos a { margin-right: 2ch;}
 
@@ -137,9 +144,9 @@
       <h2>Bag Pack</h2>
       <p>We created 17 unique Kontakt instruments from one extraordinary sample.</p>
       <ul>
-        <li><a href="#demos">check the demos</a>
-        <li><a href="#download">download the instruments</a>
-        <li><a href="#newsletter">stay in touch</a>
+        <li><a href="#demos">check the demos ➤</a>
+        <li><a href="#download">download the instruments ⇶</a>
+        <li><a href="#newsletter">stay in touch ⤅</a>
       </ul>
     </section>
 
@@ -163,8 +170,14 @@
       <!--End mc_embed_signup-->
     </section>
 
-
+    <footer>
+        <p>© Sonomato 2019 – 
+        Spichernstraße 2
+        Cologne 50672
+        Germany</p>
+    </footer>
   </main>
+
 </body>
 
 </html>
