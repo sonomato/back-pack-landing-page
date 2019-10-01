@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sonomato</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    :root {
+      font-size: calc(1rem + 1vw);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+      max-width: 60ch;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "header"
+      "infos"
+      "demos"
+      "download"
+      "newsletter"
+    }
+    @media (min-width: 800px) {
+      main {
+        display: grid;
+        grid-template-columns: 5fr 3fr;
+        grid-template-areas: 
+          "header header"
+          "infos demos"
+          "download newsletter";
+      }
+    }
+    main > * {
+      padding: 2em;
+    }
+    
+    header {
+      min-height: 66vh;
+      max-height: 66vh;
+      padding: 0;
+      display: grid;
+      grid-template-areas: "content";
+      color: white;
+    }
+    
+    header img {
+      z-index: -1;
+      grid-area: content;
+      width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      object-position: 0% 100%;
+    }
+    
+    header h1 {
+      grid-area: content;
+      padding: 1em;
+    }
+    
+    header {
+      grid-area: header;
+    }
+    
+    #infos {
+      grid-area: infos;
+      background-color: #4e300871;
+    }
+    #demos {
+      grid-area: demos;
+      background-color: #361a8371;
+    }
+    
+    #download {
+      grid-area: download;
+      background-color: #2cc51f71;
+    }
+    
+    #newsletter {
+      grid-area: newsletter;
+      background-color: #b95b1c71;
+    }
+
+    #infos a { margin-right: 2ch;}
+
+    label { 
+      display: block;
+    }
+    input {
+      font-size: 0.5rem;
+      display: inline-block;
+      height: 3em;
+      margin-top: 1em;
+      padding: 0.3rem;
+      border: 1px solid black;
+    }
+    input[type="submit"] {
+      cursor: pointer;
+      color: white;
+      border: 0;
+      background-color: black;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <main>
+    <header>
+      <h1>Sonomato</h1>
+      <img class="image" src="img/bagpipe-outboard-jam.jpg" alt="Attention gearporn! Sonomato jamin´ on the floor for the bagpipe competition.">
+    </header>
+    <section id="infos">
+      <h2>Bag Pack</h2>
+      <p>We created 17 unique Kontakt instruments from one extraordinary sample.</p>
+      <ul>
+        <li><a href="#demos">check the demos</a>
+        <li><a href="#download">download the instruments</a>
+        <li><a href="#newsletter">stay in touch</a>
+      </ul>
+    </section>
+
+    <section id="demos">
+      <h2>Demos</h2>
+      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/881385100&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+    </section>
+    <section id="download">
+      <h2>Download</h2>
+      <a target="_blank" href="https://www.dropbox.com/s/swr7219zh9tflmb/Sonomato-BagPack.zip?dl=0">download the instruments</a>
+    </section>
+    <section id="newsletter">
+      <h2>Newsletter</h2>
+      <!-- Begin Mailchimp Signup Form -->
+      <form action="https://sonomato.us20.list-manage.com/subscribe/post?u=0b35c2d2f2805c5bdea5d4129&amp;id=d7cc85dda5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <label for="mce-EMAIL">Email</label>
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0b35c2d2f2805c5bdea5d4129_d7cc85dda5" tabindex="-1" value=""></div>
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+      </form>
+      <!--End mc_embed_signup-->
+    </section>
+
+
+  </main>
+</body>
+
+</html>
